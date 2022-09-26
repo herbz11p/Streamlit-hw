@@ -12,7 +12,7 @@ import plotly.figure_factory as ff
 
 
 st.title("GDP on India")
-GDP_Of_India=pd.read_csv("GDP Growth of India - Sheet1.csv")
+GDP_Of_India=pd.read_csv("GDP Growth of India - Sheet1 (1).csv")
 
 
 gdp_india=px.scatter(GDP_Of_India, x="Year", y= "GDP of IND")
