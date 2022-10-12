@@ -24,7 +24,7 @@ st.plotly_chart(gdp_india)
 
 slider_year = st.slider("Choose Year Range", max_value = 2020, min_value = 1961, value = [1961, 2020], step=10)
 gdp_indias = GDP_Of_India.loc[(GDP_Of_India["Year"] >= slider_year[0]) & (GDP_Of_India["Year"] <= slider_year[1])]
-gdp_india=px.line(gdp_indias, x="Year", y= "GDP of IND")
+gdp_india= px.line(gdp_indias, x="Year", y= "GDP of IND")
 
 
 gdp_india=px.histogram(GDP_Of_India, x="Year", y= "GDP of IND")
@@ -32,6 +32,9 @@ st.plotly_chart(gdp_india)
 
 gdp_india=px.bar(GDP_Of_India, x="Year", y= "GDP of IND")
 st.plotly_chart(gdp_india)
+
+options = st.selectbox("Select Year", Year)
+GDP_Of_India = GDP_Of_India[GDP_Of_India["Year"]==options]
 
 gdp_india=px.box(GDP_Of_India, x="Year", y= "GDP of IND")
 st.plotly_chart(gdp_india) 
