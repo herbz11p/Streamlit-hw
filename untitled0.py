@@ -33,7 +33,7 @@ st.plotly_chart(gdp_india)
 gdp_india=px.bar(GDP_Of_India, x="Year", y= "GDP of IND")
 st.plotly_chart(gdp_india)
 
-options = st.selectbox("Select Year", x="Year)
+options = st.selectbox("Select Building", bldg)
 GDP_Of_India = GDP_Of_India[GDP_Of_India["Year"]==options]
 
 gdp_india=px.box(GDP_Of_India, x="Year", y= "GDP of IND")
